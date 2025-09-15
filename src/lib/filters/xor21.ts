@@ -1,7 +1,12 @@
 // Pure function: xor a number
-export function xor(x: number): number 
+function xor(x: number): number 
 {
   return x ^ 21;
+}
+
+export function multipleXors(xs: number[]): number[] 
+{
+  return xs.map(xor);
 }
 
 //src/lib/filters/index.ts
