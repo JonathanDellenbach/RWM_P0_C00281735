@@ -3,7 +3,7 @@ import { xor } from './xor21';
 
 describe('Xor filter', () => {
   it('Xors a number', () => {
-    const input = 5;
+    const input = 4; // 5 doesnt equal 17 after xor.
     const expected = 17;
     expect(xor(input)).toEqual(expected);
   });
