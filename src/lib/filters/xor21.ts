@@ -1,7 +1,7 @@
 // Pure function: xor a number
 export function xor(x: number): number 
 {
-  return x ^ x;
+  return x ^ 21;
 }
 
 //src/lib/filters/index.ts
