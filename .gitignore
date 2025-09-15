@@ -1,29 +1,23 @@
-# Visual Studio files
-.vs/
-Debug/
-Release/
-x64/
-x86/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
+node_modules
 
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-[Xx]64/
-[Xx]86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
 
-# VS Code
-.vscode/
-
-# OS generated files
-Thumbs.db
+# OS
 .DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
