@@ -1,8 +1,11 @@
 <script lang="ts">
   import { cubes } from '$lib/filters';
-  let raw = '1 3 5 7 9 999';
+  import { multipleXors } from '$lib/filters';
+
+  let raw = '1 4 5 7 9 999';
   $: input = raw.trim().split(/\s+/).filter(Boolean).map(Number);
-  $: output = cubes(input);
+  //$: output = cubes(input);
+  $: output = multipleXors(input);
 </script>
 
 <h1>Sequence Filter Demo</h1>
