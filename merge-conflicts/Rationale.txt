@@ -1,0 +1,18 @@
+* Upon one merge conflict regarding the demo.txt my lines at one point looked like:
+Line 1 (B)
+Line 1 (A)
+Line 2
+
+I realized it was replicated code so through the merging tool I put them together resulting in:
+
+Line 1 (A) (B)
+Line 2
+
+
+* Similarly in Button.svelte there was slight differences in the styling of the button and with use of
+the VSCode merge tool or meld it simplified the usage of fixing merge conflicts and making it easier
+to read the side by side comparison. 
+
+* On branch A the button was more console focused whereas branch B is a bit more interactive
+so once again using the merge tools I did a side by side comparison allowing me to make a decsion
+and ended up choosing B as it would of been a more interactive experience for a user.
