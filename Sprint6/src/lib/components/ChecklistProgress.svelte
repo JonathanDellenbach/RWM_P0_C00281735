@@ -33,19 +33,42 @@
   
 </script>
 
+<style>
+  .progress-bar-bg {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #007bff;
+    /* Removed the transition to make the fill update instantly */
+  }
+</style>
+
 <div>
   <p data-testid="progress-label">
     {submittedCompletedCount}/{submittedTotal} ({submittedPercentage}%)
   </p>
 
+  <div class="progress-bar-bg">
+    <div
+      class="progress-bar-fill"
+      style="width: {submittedPercentage}%"
+    />
+  </div>
+
   {#each $itemsStore as item (item.id)}
     <ChecklistItem
-  id={item.id}
-  label={item.label}
-  done={item.done}
-  on:change={handleItemChange}
-/>
-
+      id={item.id}
+      label={item.label}
+      done={item.done}
+      on:change={handleItemChange}
+    />
   {/each}
 
   <button data-testid="submit-version" on:click={handleSubmit}>
